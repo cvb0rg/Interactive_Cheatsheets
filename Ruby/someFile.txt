@@ -1,0 +1,3 @@
+Some Text, or variables or anything
+
+someVariableReadFromFile = 42
