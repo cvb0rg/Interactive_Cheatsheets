@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 #include <fstream>  // File IO
+#include <math.h>   // All the math functions
 #include "myFunctions.h" // Here be the functions
 	// Make sure to use "" and not < > for header files
 
@@ -226,7 +227,7 @@ int main(int argc, const char * argv[])
 	++moreNumbers[4];
 	moreNumbers[0] += moreNumbers[1];
 	cout << moreNumbers[4] << endl;
-	cout << moreNumbers[0] << endl;exit(0);
+	cout << moreNumbers[0] << endl;
 
 
 // ---------- Vectors ----------
