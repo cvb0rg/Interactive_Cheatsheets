@@ -7,3 +7,4 @@ Languages currently covered:
 - C++
 - Python
 - Ruby
+- JavaScript
