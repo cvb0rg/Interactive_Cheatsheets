@@ -487,7 +487,8 @@ class Fruit(object):
 	"""A class that makes various tasty fruits."""
 	is_a_fruit = True # member variable
 
-	# private attribute: add "__" before 
+	# private attributes in Python are merely a convention, achieved through obfuscation.
+	# private attribute: add "_" or "__" before 
 	# Can't be accessed unless by getter/setter methods
 	# Good for verifying inputs (encapsulation)
 	__privateAttribute = None # doesn't have a value
