@@ -38,6 +38,7 @@ print "world!"
 
 # Find types
 print type("hello") # => 'str'
+print isinstance("hello", str) # => True
 
 # Stop the execution, anywhere is the script
 # quit()
@@ -112,6 +113,39 @@ random_num = random.randrange(0,100)  # 0 to 99
 print random_num
 
 
+# Assertion:
+# assert (condition), "statement"
+def yearBorn(currentYear, age):
+	assert (age >= 0), "Can't have negative age!"
+	return currentYear - age
+
+# print yearBorn(2016, -16) # => Will throw an exception
+
+
+# Unit testing
+# Good error logging, good testing, and internal self-checks (assertions)
+
+def is_Prime(num):
+	for divisor in range(num):
+		if num % divisor == 0:
+			return False
+		return True
+
+# Run PrimesTestCase.py; will reveal an error:
+
+# ======================================================================
+# ERROR: test_is_five_prime (__main__.PrimesTestCase)
+# Is five successfully determined to be prime?
+# ----------------------------------------------------------------------
+# line 121, in is_Prime
+#     if num % divisor == 0:
+# ZeroDivisionError: integer division or modulo by zero
+
+# ----------------------------------------------------------------------
+# Ran 1 test in 0.000s
+	
+
+
 #######################
 # Data types
 #######################
@@ -162,6 +196,7 @@ print my_string # note: the string is not modified
 
 # strip white space at the beginning and the end
 print "    A lot of white spaces    ".strip(), '.'
+
 
 
 ######## Lists ########
@@ -291,6 +326,7 @@ print my_dict.has_key(2.3) # => False
 print my_dict.get('key1', 'return not valid if does not exist') # => 'not valid'
 
 
+
 #######################
 # Control Flow
 #######################
@@ -311,6 +347,7 @@ elif some_condition:
 else:
 	# something else
 	print "Meh"
+
 
 
 #######################
@@ -391,6 +428,7 @@ while i <= 20:
 print''
 
 
+
 #######################
 # Functions
 #######################
@@ -419,7 +457,8 @@ print f(3) # => 9
 my_list = range(16)
 print map(lambda x: x ** 2, my_list) # squares all elements
 print filter(lambda x: x % 3 == 0, my_list) # => [0, 3, 6, 9, 12, 15]
-print reduce(lambda x, y: x + y, my_list) # sum 0:15
+print reduce(lambda x, y: x + y, my_list, 0) # => 120
+	# sum 0:15; 0 is the initial value of the accumulator (optional)
 
 # Nested scopes:
 def multiplyBy(val):
@@ -428,7 +467,14 @@ def multiplyBy(val):
 f = multiplyBy(3)
 print f(10) # => 30
 
+
+# Functional Programing
+# itertools and functools built-in modules
+# generators
+# decorators
+
 ######## Type casting functions ########
+
 print int('1234')
 # string, floating point -> integer	
 
@@ -437,6 +483,10 @@ print float(5)	# => 5.0
 
 print str(12)	
 # integer, float, list, tuple, dictionary -> string	
+
+# Note:  type('') == type("") == str == types.StringType
+import types
+print types.StringType
 
 print list('Hello')	# => 
 # string, tuple, dictionary -> list	
@@ -612,6 +662,7 @@ class Species_identifier:
 test_fruit = Species_identifier() # make a new object
 test_fruit.get_species(lemon) # => Fruit
 test_fruit.get_species(banana) # => Tropical Fruit
+
 
 
 #######################

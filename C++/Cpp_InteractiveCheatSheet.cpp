@@ -18,6 +18,8 @@
 
 #include "Animal.h"
 
+// Stop execution anywhere in the code
+// exit(someInteger);  
 
 using namespace std; // To avoid typing std:: all the time
 
@@ -137,6 +139,29 @@ int main(int argc, const char * argv[])
 	std::cout << "Hello World!"; // Call out
 	cout << "Hello World! Again!" << endl; // End the line
 	cout << "This is a new line" << endl;
+
+// Formatted formatted data to stdout
+	printf ("The answer to %c + %c is %d \n", 'a', 'b', 65);
+
+// Some common formatting tokens
+// %d or i	Signed decimal integer							392
+// %u	Unsigned decimal integer							7235
+// %o	Unsigned octal										610
+// %x	Unsigned hexadecimal integer						7fa
+// %X	Unsigned hexadecimal integer (uppercase)			7FA
+// %f	Decimal floating point, lowercase              		392.65
+// %F	Decimal floating point, uppercase	                392.65
+// %e	Scientific notation (mantissa/exponent), lowercase	3.9265e+2
+// %E	Scientific notation (mantissa/exponent), uppercase	3.9265E+2
+// %g	Use the shortest representation: %e or %f	        392.65
+// %G	Use the shortest representation: %E or %F	        392.65
+// %a	Hexadecimal floating point, lowercase	            -0xc.90fep-2
+// %A	Hexadecimal floating point, uppercase	            -0XC.90FEP-2
+// %c	Character	                                        a
+// %s	String of characters	                            Hello world!
+// %p	Pointer address	                                    b8000000
+// %n	Nothing printed.
+
 
 // User input
 // Won't work in Sublime though
@@ -603,12 +628,10 @@ int main(int argc, const char * argv[])
  	// in the super-class, which is Dog here.
  	// It will tell the compiler to expect a modification to the virtual method in the sub-class, which is Samoyed here.
  	*/
-
 	
  	cout << "---------- THE END ----------" << endl;
 	return 0;
 }
-
 
 
 
